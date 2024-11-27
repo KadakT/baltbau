@@ -1,0 +1,21 @@
+.footer {
+    background-color: $color-black;
+    color: $color-white;
+
+    // .footer__copyright
+    &__copyright {
+        padding: 30px 40px;
+        text-align: center;
+        font-size: $fs-300;
+    }
+
+     // .footer__mail
+    &__mail {
+        text-decoration: none;
+        color: $color-white;
+        margin-left: 4px;
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}

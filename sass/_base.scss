@@ -1,0 +1,198 @@
+// COLOR VARIABLES
+
+$color-primary: #fed620;
+$color-primary-light:#ffde00;
+
+$color-secondary: #151515;
+$color-secondary-light-1: #171717;
+$color-secondary-light-2: #707070;
+
+$color-bachground-primary:#ffffff;
+$color-bachground-primary-2: #fafafa;
+$color-bachground-secondary:#000000;
+$color-bachground-secondary-2:#fed61f;
+$color-bachground-tertiary:#0a0a0a;
+
+
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-font-primary: #1d1d1d;
+$color-font-secondary: #fdfdfd;
+
+//SHADOWS
+$img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
+
+// FONT VARIABLES
+$font-primary: "Roboto Condensed", sans-serif;
+$font-display: "Lora", serif;
+
+//FONT SIZE VARIABLES
+$fs-xlarge: 4rem;
+$fs-xlarge-tablet:2.813rem;
+$fs-xlarge-phone: 2.5rem; 
+
+// font-sizes for heading 2
+$fs-large: 3.125rem; 
+$fs-large-tablet: 2.813rem;
+$fs-large-phone: 2.5rem; 
+
+// font-sizes for heading 3
+$fs-600: 2.25em; 
+$fs-600-tablet: 2em; 
+$fs-600-phone: 1.625em; 
+
+// font-sizes 
+$fs-500: 1.75em; // 28px
+$fs-500-tablet: 1.5em; // 24px
+$fs-500-phone: 1.375em; //22px
+
+// font-sizes for body
+$fs-400: 1em; // 16px
+// $fs-400-tablet: 
+// $fs-400-phone:
+
+// font-sizes small
+$fs-300: .8em; // 12.8px
+// $fs-300-tablet:
+// $fs-300-phone:
+
+
+//RESPONSIVE BREAKPOINTS
+$bp_largest: 75em; // 1200px
+$bp_large: 62.5em; // 1000px
+$bp_medium: 50em; // 800px
+$bp_small: 37.5em; // 600px
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+::-moz-selection { /* Code for Firefox */
+    color: $color-white;
+    background: $color-primary;
+  }
+  
+  ::selection {
+    color: $color-white;
+    background: $color-primary;
+  }
+
+html {
+    box-sizing:  border-box;
+    font-size: $fs-400; 
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-font-primary;
+    font-weight: 400;
+    line-height: 1.37em;
+    background-color: $color-bachground-primary;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 1.5%;
+    width: 100%; 
+    @include respond(tab-port) {
+        padding: 0 .8rem;
+    }
+}
+
+.section-home, .section-contact{
+  
+}
+.section-home{
+    background-image: url("./../img/test.jpg");
+    background-color: $color-secondary-light-1;
+    height: 85vh;
+    min-height: 600px;
+    width: 100%;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    @include respond(tab-port) {
+
+    }
+}
+.section-home .mask {
+    opacity:0.65;
+    filter: alpha(opacity=85);
+    top: 0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: $color-secondary-light-1;
+    position:absolute;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+
+.section-projects{
+   
+}
+
+.section-about{
+    background-color: $color-bachground-primary-2;
+    &__additional{
+        background-color: $color-bachground-tertiary;
+        color: $color-font-secondary;
+    }
+    &__highlight{
+        background-color: $color-bachground-secondary-2;
+        color: $color-font-secondary;
+        height: 200px;
+    }
+}
+
+.section-contact{
+    background-color: $color-bachground-tertiary;
+    color: $color-font-secondary;
+}
+
+//............ SHARED ELEMENTS...................
+
+//BUTTONS
+.btn {
+    border: none;
+    cursor: pointer;
+    &,
+    &:link,
+    &:visited {
+        // text-transform: uppercase;
+        // text-decoration: none;
+        // padding:  1rem 2rem;
+        // display: inline-block;
+        // border-radius: 10rem;
+        // transition: all .2s;
+        // position: relative;
+        // font-size: $fs-400;
+        // width: max-content;
+        // background-color: $color-primary-dark;
+        // color: $color-white;
+    }
+}
+.btn--action {
+}
+
+// THE REST ELEMENTS
+.p--underline{
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -.7rem;
+        width: 100%;
+        //background-color: $color-grey-light-2;
+        height: 1px;
+    }
+}

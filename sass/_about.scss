@@ -1,0 +1,76 @@
+
+.about {
+
+	.heading-2{
+		position: relative;
+	}
+
+	.heading-2::after{
+		content: '';
+		height: 3px;
+		min-width: 75px;
+		background-color: $color-primary;
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+   
+		// .about__picture
+		&__picture {
+           
+		}
+
+		// .about__img
+		&__img {
+           
+		}
+
+		// .about__details
+		&__details {
+			
+		}
+
+		// .about__text
+		&__text {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			max-width: 1000px;
+		}
+}
+
+.skills {
+   
+    // .skills__text
+	&__text {
+        
+	}
+
+    // .skills__bar
+	&__bar {
+		
+	}
+
+	// .skills__item
+	&__item {
+	}
+
+	&__name {
+	}
+
+	// .skills__container
+	&__container {
+	}
+
+	// .skills__skill
+	&__skill {
+       
+	}
+
+	// .skills__btn
+	&__btn {
+       
+	}
+}

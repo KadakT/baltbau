@@ -1,0 +1,43 @@
+.home {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+     z-index: 10;
+		// .home__content
+		&__content {
+
+		}
+
+		// .home__picture
+		&__picture {
+
+		}
+}
+
+.heading-primary {
+   position: relative;
+    &--main{
+       
+    }
+    &--sub{
+    
+    }
+
+    &::after{
+       
+    }
+}
+
+.heading-primary::after{
+    content: '';
+    height: 3px;
+    min-width: 75px;
+    background-color: $color-primary;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+

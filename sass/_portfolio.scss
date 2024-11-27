@@ -1,0 +1,61 @@
+.projects {
+    // .projects__text
+    &__text {
+       
+    }
+
+    // .projects__list
+
+    &__list {
+       
+    }
+
+    // .projects__item
+
+    &__item {
+       
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    // .card__tittle
+
+    &__img{
+        margin-bottom: 1rem;
+    }
+
+    &__tittle {
+       line-height: 4rem;
+    }
+
+    // .card__text
+
+    &__text {
+        margin-bottom: 1rem;
+    }
+
+    // .card__btn
+    &__btn {
+        margin-top: auto;
+        margin-bottom: 1rem;
+        align-self: center;
+        display: flex;
+        align-items: center;
+    }
+
+    // .card__icon
+    &__icon{
+        display: inline-flex;
+        align-self: center;
+        margin-right: 10px;
+
+        svg{
+            width: 1rem;
+            height: 1rem;
+            fill: $color-white;
+        }
+    }
+
+}

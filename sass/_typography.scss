@@ -1,0 +1,58 @@
+.heading-primary--main{
+  
+    font-weight: 300;
+      span{
+        font-weight: 600;
+      }
+}
+
+.heading-primary{
+    font-size: $fs-xlarge;
+    font-family: $font-primary;
+    line-height: 1.25em;
+    color: $color-font-secondary;
+    text-transform: uppercase;
+}
+
+.heading-primary--sub{
+    font-size: 1.75rem;
+    line-height: .8em;
+    font-weight: 500;
+}
+
+.heading-primary--sub,
+.heading-2,
+.heading-3{
+    font-family: $font-primary  
+}
+
+.heading-2 {
+    font-family: $font-primary;
+    font-weight: 400;  
+    font-size: $fs-large;
+    line-height: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
+    @include respond(tab-port){
+        font-size: $fs-large-tablet;
+    }
+    @include respond(phone){
+        font-size: $fs-large-phone;
+    }
+}
+
+.heading-3{
+    font-family: $font-primary;
+    font-weight: 400;
+    font-size: $fs-600;
+    line-height: 1.25em;
+
+}
+
+.heading--color-primary{
+    color: $color-font-primary;
+}
+
+.heading--color-secondary{
+    color: $color-font-secondary;
+}
