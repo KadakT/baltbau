@@ -26,6 +26,7 @@
     font-family: $font-primary  
 }
 
+
 .heading-2 {
     font-family: $font-primary;
     font-weight: 400;  
@@ -46,7 +47,17 @@
     font-weight: 400;
     font-size: $fs-600;
     line-height: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
 
+}
+
+.heading-4{
+    font-weight: 400;
+    font-family: $font-primary;
+    line-height: 1.25em;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .heading--color-primary{

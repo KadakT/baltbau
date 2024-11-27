@@ -74,7 +74,7 @@ body {
   .section-about__highlight {
     background-color: #fed61f;
     color: #fdfdfd;
-    height: 200px; }
+    height: 10px; }
 
 .section-contact {
   background-color: #0a0a0a;
@@ -134,7 +134,16 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 400;
   font-size: 2.25em;
-  line-height: 1.25em; }
+  line-height: 1.25em;
+  text-align: center;
+  text-transform: uppercase; }
+
+.heading-4 {
+  font-weight: 400;
+  font-family: "Roboto Condensed", sans-serif;
+  line-height: 1.25em;
+  text-align: center;
+  text-transform: uppercase; }
 
 .heading--color-primary {
   color: #1d1d1d; }
@@ -187,12 +196,30 @@ body {
     .u-padding-bottom-medium {
       padding-bottom: 2rem; } }
 
+.zoom-in {
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  transition: all 250ms ease; }
+
+.zoom-in:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -moz-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1); }
+
 .home {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  color: #fdfdfd;
   z-index: 10; }
 
 .heading-primary {
@@ -341,6 +368,59 @@ body {
   text-align: center;
   max-width: 1000px; }
 
+.section-about .heading-3 {
+  position: relative; }
+
+.section-about .heading-3::after {
+  content: '';
+  height: 3px;
+  min-width: 75px;
+  background-color: #fed620;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.section-about__cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem; }
+
+.section-about .card {
+  max-width: 350px;
+  min-width: 250px;
+  background-color: #292929;
+  padding: 2rem 1rem 3rem 1rem;
+  text-align: center;
+  border-radius: 3px;
+  position: relative;
+  transform-style: preserve-3d; }
+  .section-about .card__icon {
+    border: 2px solid #FFFFFF;
+    background-color: #fed620;
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .section-about .card img {
+    height: 3rem; }
+
+.section-about .card::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #FFFFFF;
+  background-color: #fed620;
+  bottom: -15px;
+  right: -15px;
+  border-radius: 6px;
+  transform: translateZ(-1px);
+  box-sizing: content-box;
+  /* Only if you have some reset that makes everything border-box */ }
+
 .card {
   display: flex;
   flex-direction: column; }
@@ -410,23 +490,6 @@ body {
   display: inline-block;
   width: 35px;
   height: 35px; }
-
-.contact .zoom-in {
-  -webkit-transform: scale(1, 1);
-  -moz-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
-  -ms-transform: scale(1, 1);
-  -webkit-transition: all 250ms ease;
-  -moz-transition: all 250ms ease;
-  -o-transition: all 250ms ease;
-  -ms-transition: all 250ms ease;
-  transition: all 250ms ease; }
-
-.contact .zoom-in:hover {
-  -webkit-transform: scale(1.1, 1.1);
-  -moz-transform: scale(1.1, 1.1);
-  -o-transform: scale(1.1, 1.1);
-  -ms-transform: scale(1.1, 1.1); }
 
 .footer {
   background-color: #000000;

@@ -41,36 +41,72 @@
 		}
 }
 
-.skills {
+.section-about{
+	.heading-3{
+		position: relative;
+	}
+
+	.heading-3::after{
+		content: '';
+		height: 3px;
+		min-width: 75px;
+		background-color: $color-primary;
+		position: absolute;
+		top: 150%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
    
-    // .skills__text
-	&__text {
-        
+	&__cards{
+        display: flex;
+		justify-content: space-between;
+		gap: 1rem
 	}
 
-    // .skills__bar
-	&__bar {
-		
+	.card{
+		max-width: 350px;
+		min-width: 250px;
+		background-color: $color-bachground-cards;
+		padding: 2rem 1rem 3rem 1rem;
+		text-align: center;
+		border-radius: 3px;
+		position: relative;
+		transform-style: preserve-3d;
+		&__icon{
+			border: 2px solid $color-white;
+			background-color: $color-primary;
+			height: 5rem;
+			width: 5rem;
+			border-radius: 50%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		img{
+			height: 3rem;
+		}
+		&__title{
+			
+		}
+		&__title{
+			
+		}
+		&__body{
+
+		}
 	}
 
-	// .skills__item
-	&__item {
-	}
-
-	&__name {
-	}
-
-	// .skills__container
-	&__container {
-	}
-
-	// .skills__skill
-	&__skill {
-       
-	}
-
-	// .skills__btn
-	&__btn {
-       
-	}
+	.card::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border: 2px solid $color-white;
+		background-color: $color-primary;
+		bottom: -15px;
+		right: -15px;
+		border-radius: 6px;
+		transform: translateZ(-1px);
+		box-sizing: content-box; /* Only if you have some reset that makes everything border-box */
+	  }
 }
