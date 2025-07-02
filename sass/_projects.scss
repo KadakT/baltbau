@@ -1,0 +1,90 @@
+.section-projects{
+	.heading-3{
+		position: relative;
+	}
+
+	.heading-3::after{
+		content: '';
+		height: 3px;
+		min-width: 75px;
+		background-color: $color-primary;
+		position: absolute;
+		top: 150%;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+   
+	&__cards{
+        display: flex;
+		gap: 3rem;
+		justify-content: center;
+		flex-wrap: wrap;
+		@include respond(tab-land) {
+			justify-content: space-evenly;
+		}
+	}
+
+	.card{
+		max-width: 450px;
+		min-width: 250px;
+		background-color: $color-bachground-tertiary-light;
+		padding: 2rem 1rem 3rem 1rem;
+		text-align: center;
+		border-radius: 3px;
+		position: relative;
+		transform-style: preserve-3d;
+		margin-top: 1rem;
+        &__img{
+            height: 300px;
+            overflow: hidden;
+            margin-top: -2rem;
+            margin-inline: -1rem;
+            border-radius: 3px;
+        }
+		img{
+			height: 100%;
+            width: 100%;
+            object-fit: cover;
+		}
+		&__title{
+			
+		}
+		&__title{
+			
+		}
+		&__body{
+
+		}
+	}
+
+	.card::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		border: 2px solid $color-white;
+		background-color: $color-primary;
+		bottom: -15px;
+		right: -15px;
+		border-radius: 6px;
+		transform: translateZ(-1px);
+		box-sizing: content-box; 
+	}
+}
+
+.cta-text {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+.cta-link {
+  color: #e63946;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff6b6b;
+    text-decoration: underline;
+  }
+}

@@ -64,3 +64,31 @@
    -o-transform: scale(1.1, 1.1);
    -ms-transform: scale(1.1, 1.1);
 }
+
+.rotated-square {
+  width: 450px;
+  height: 450px;
+  background-color: #27282a; /* or any color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  transform: rotateY(90deg) rotate(45deg);
+  animation: flipIn45deg 1.2s linear forwards;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@keyframes flipIn45deg {
+  0% {
+    transform: rotateY(90deg) rotate(45deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotateY(45deg) rotate(45deg);
+    opacity: 0.5;
+  }
+  100% {
+    transform: rotateY(0deg) rotate(45deg);
+    opacity: 1;
+  }
+}

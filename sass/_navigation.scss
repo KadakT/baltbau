@@ -1,5 +1,7 @@
 .navigation {
-    background-color: $color-bachground-primary;
+    // background-color: $color-bachground-primary;
+    background-color: $color-bachground-tertiary;
+  
     &__btn{
         display: none;
         @include respond(tab-port) {
@@ -32,7 +34,8 @@
             font-size: $fs-400;
             font-family: $font-display;
             font-weight: 500;;
-            color: $color-font-primary;
+            // color: $color-font-primary;
+              color: $color-font-secondary;
             text-decoration: none;
             text-transform: uppercase;
             text-align: center;

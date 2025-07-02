@@ -1,5 +1,10 @@
 jQuery(document).ready(function() {
   let windowWidth = $( window ).width();
+
+  let logo = $("#logo");
+  setInterval(function(){
+    logo.attr('src', './img/static_logo.png');
+  }, 2500);
   // Hide url parameters in address bar 
   //history.replaceState(null, document.querySelector("title").innerText, window.location.pathname);
   /*
@@ -41,11 +46,11 @@ jQuery(document).ready(function() {
       $(".navigation__btn").removeClass( "close" );
     }
 
-    if($('.skills__container').isInViewport()){
-      jQuery('.skills__container').each(function() {
-        jQuery(this).find('.skills__skill').animate({ width: jQuery(this).attr('data-percent') }, 3000);
-    });
-    }
+    // if($('.skills__container').isInViewport()){
+    //   jQuery('.skills__container').each(function() {
+    //     jQuery(this).find('.skills__skill').animate({ width: jQuery(this).attr('data-percent') }, 3000);
+    // });
+    // }
   });
 
     $(document).click(function(e) {
