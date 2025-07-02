@@ -1,1 +1,20 @@
 node_modules/
+
+
+# Sass cache
+.sass-cache/
+
+# macOS system files
+.DS_Store
+
+# VS Code settings
+.vscode/
+
+# Env file (if you ever add one)
+.env
+
+# npm debug log
+npm-debug.log*
+
+# OS metadata
+Thumbs.db

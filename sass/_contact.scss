@@ -83,5 +83,9 @@
 
     &__phone {
     }
+
+    .heading-2::after{
+        display: none;
+    }
 }
 

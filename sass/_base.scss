@@ -7,19 +7,21 @@ $color-secondary: #151515;
 $color-secondary-light-1: #171717;
 $color-secondary-light-2: #707070;
 
+$color-white: #FFFFFF;
+$color-black: #000000;
+
 $color-bachground-primary:#ffffff;
 $color-bachground-primary-2: #fafafa;
 $color-bachground-secondary:#000000;
 $color-bachground-secondary-2:#fed61f;
 $color-bachground-tertiary:#0a0a0a;
+$color-bachground-tertiary-light: #212121;
 $color-bachground-cards:#292929;
-
-
-$color-white: #FFFFFF;
-$color-black: #000000;
 
 $color-font-primary: #1d1d1d;
 $color-font-secondary: #fdfdfd;
+
+$border-radius: 3px;
 
 //SHADOWS
 $img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
@@ -110,7 +112,7 @@ body {
   
 }
 .section-home{
-    background-image: url("./../img/test.jpg");
+    background-image: url("./../img/our_strengths.jpg");
     background-color: $color-secondary-light-1;
     height: 85vh;
     min-height: 600px;
@@ -124,6 +126,12 @@ body {
 
     }
 }
+
+.section-about{
+    background-color: $color-bachground-cards;
+    color: $color-font-secondary;
+}
+
 .section-home .mask {
     opacity:0.65;
     filter: alpha(opacity=85);
@@ -141,20 +149,23 @@ body {
    
 }
 
-.section-about{
-    background-color: $color-bachground-primary-2;
+.section-projects{
+    
     &__additional{
-        background-color: $color-bachground-tertiary;
+        background-color: $color-bachground-cards;
         color: $color-font-secondary;
     }
     &__highlight{
         background-color: $color-bachground-secondary-2;
-        color: $color-font-secondary;
-        height: 10px;
+        color: $color-font-primary;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
-.section-contact{
+.section-contact, .section-services{
     background-color: $color-bachground-tertiary;
     color: $color-font-secondary;
 }
