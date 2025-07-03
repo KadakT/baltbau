@@ -1,27 +1,36 @@
 {
-  "name": "my_portfolio",
+  "name": "baltbau",
   "version": "1.0.0",
-  "description": "Tatjana Kadak portfolio",
+  "description": "Professionelle Bau- und Renovierungsdienste in Deutschland – BaltBau",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass sass/main.scss css/style.css -w",
-    "devserver": "live-server",
+    "watch:sass": "sass --watch sass/main.scss public/css/style.css",
+    "devserver": "nodemon server.js",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" css/style.comp.css -o css/style.prefix.css",
-    "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "compile:sass": "sass sass/main.scss public/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" public/css/style.comp.css -o public/css/style.prefix.css",
+    "compress:css": "sass public/css/style.prefix.css public/css/style.css --style=compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "sync:html": "copyfiles views/index.html docs/",
+    "sync:assets": "copyfiles -u 1 public/**/* docs/",
+    "sync:css": "copyfiles -u 1 public/css/** docs/css",
+    "sync:docs": "npm run build:css && npm run sync:html && npm run sync:css && npm run sync:assets"
   },
   "author": "Tatjana Kadak",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.20",
     "concat": "^1.0.3",
-    "node-sass": "^9.0.0",
+    "nodemon": "^3.1.9",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^11.0.0"
+    "postcss-cli": "^11.0.0",
+    "purgecss": "^7.0.2",
+    "sass": "^1.86.2"
   },
   "dependencies": {
-    "jquery": "^3.7.1"
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "jquery": "^3.7.1",
+    "open": "^10.1.0"
   }
 }
