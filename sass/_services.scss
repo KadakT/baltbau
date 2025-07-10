@@ -1,36 +1,41 @@
-.services{
-    &__card{
+.services {
+    &__card {
         display: flex;
         margin-bottom: 2rem;
         gap: 2rem;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
         background-color: $color-bachground-tertiary-light;
+        @include respond(tab-port){
+            flex-direction: column;
+        }
     }
-    &__img{
+
+    &__img {
         width: 100%;
         max-width: 350px;
-        img{
+
+        img {
             width: 100%;
             max-width: 350px;
             height: 100%;
         }
     }
-    &__text{
+
+    &__text {
         padding: 2rem 1rem 3rem 1rem;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
 
-        h3{
+        h3 {
             margin-bottom: 3rem;
         }
     }
 
-    .left{
-      
-    }
-    .right{
+    .left {}
+
+    .right {
 
         .projects__text {
             text-align: right;
