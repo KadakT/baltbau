@@ -1,7 +1,7 @@
 // COLOR VARIABLES
 
 $color-primary: #fed620;
-$color-primary-light:#ffde00;
+$color-primary-light: #ffde00;
 
 $color-secondary: #151515;
 $color-secondary-light-1: #171717;
@@ -10,13 +10,13 @@ $color-secondary-light-2: #707070;
 $color-white: #FFFFFF;
 $color-black: #000000;
 
-$color-bachground-primary:#ffffff;
+$color-bachground-primary: #ffffff;
 $color-bachground-primary-2: #fafafa;
-$color-bachground-secondary:#000000;
-$color-bachground-secondary-2:#fed61f;
-$color-bachground-tertiary:#0a0a0a;
+$color-bachground-secondary: #000000;
+$color-bachground-secondary-2: #fed61f;
+$color-bachground-tertiary: #0a0a0a;
 $color-bachground-tertiary-light: #212121;
-$color-bachground-cards:#292929;
+$color-bachground-cards: #292929;
 
 $color-font-primary: #1d1d1d;
 $color-font-secondary: #fdfdfd;
@@ -24,7 +24,7 @@ $color-font-secondary: #fdfdfd;
 $border-radius: 3px;
 
 //SHADOWS
-$img-shadow: 0 5px 20px 0 rgba(0, 0, 0 , 0.1), 0 6px 30px 0 rgba(0, 0, 0 , 0.1);
+$img-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.1), 0 6px 30px 0 rgba(0, 0, 0, 0.1);
 
 // FONT VARIABLES
 $font-primary: "Roboto Condensed", sans-serif;
@@ -32,18 +32,18 @@ $font-display: "Lora", serif;
 
 //FONT SIZE VARIABLES
 $fs-xlarge: 4rem;
-$fs-xlarge-tablet:2.813rem;
-$fs-xlarge-phone: 2.5rem; 
+$fs-xlarge-tablet: 2.813rem;
+$fs-xlarge-phone: 2.5rem;
 
 // font-sizes for heading 2
-$fs-large: 3.125rem; 
+$fs-large: 3.125rem;
 $fs-large-tablet: 2.813rem;
-$fs-large-phone: 2.5rem; 
+$fs-large-phone: 1.75rem;
 
 // font-sizes for heading 3
-$fs-600: 2.25em; 
-$fs-600-tablet: 2em; 
-$fs-600-phone: 1.625em; 
+$fs-600: 2.25em;
+$fs-600-tablet: 2em;
+$fs-600-phone: 1.625em;
 
 // font-sizes 
 $fs-500: 1.75em; // 28px
@@ -63,31 +63,36 @@ $fs-300: .8em; // 12.8px
 
 //RESPONSIVE BREAKPOINTS
 $bp_largest: 75em; // 1200px
-$bp_large: 62.5em; // 1000px
-$bp_medium: 50em; // 800px
-$bp_small: 37.5em; // 600px
+$bp_large: 62em; // 992px
+$bp_medium: 48em; // 768px
+$bp_small: 36em; // 576px
 
 *,
 *::before,
-*::after{
+*::after {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
+    /* Code for Firefox */
     color: $color-white;
     background: $color-primary;
-  }
-  
-  ::selection {
+}
+
+::selection {
     color: $color-white;
     background: $color-primary;
-  }
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
 
 html {
-    box-sizing:  border-box;
-    font-size: $fs-400; 
+    font-size: $fs-400;
 }
 
 body {
@@ -102,16 +107,17 @@ body {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 1.5%;
-    width: 100%; 
+    width: 100%;
+
     @include respond(tab-port) {
         padding: 0 .8rem;
     }
 }
 
-.section-home, .section-contact{
-  
-}
-.section-home{
+.section-home,
+.section-contact {}
+
+.section-home {
     background-image: url("./../img/our_strengths.jpg");
     background-color: $color-secondary-light-1;
     height: 85vh;
@@ -122,40 +128,41 @@ body {
     background-position: center center;
     background-size: cover;
     position: relative;
-    @include respond(tab-port) {
+    aspect-ratio: 16 / 9;
 
+    @include respond(phone-medium) {
+        height: 65vh;
     }
 }
 
-.section-about{
+.section-about {
     background-color: $color-bachground-cards;
     color: $color-font-secondary;
 }
 
 .section-home .mask {
-    opacity:0.65;
+    opacity: 0.65;
     filter: alpha(opacity=85);
     top: 0;
-    left:0;
-    width:100%;
-    height:100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background: $color-secondary-light-1;
-    position:absolute;
+    position: absolute;
     -webkit-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
 }
 
-.section-projects{
-   
-}
+.section-projects {}
 
-.section-projects{
-    
-    &__additional{
+.section-projects {
+
+    &__additional {
         background-color: $color-bachground-cards;
         color: $color-font-secondary;
     }
-    &__highlight{
+
+    &__highlight {
         background-color: $color-bachground-secondary-2;
         color: $color-font-primary;
         height: auto;
@@ -165,7 +172,8 @@ body {
     }
 }
 
-.section-contact, .section-services{
+.section-contact,
+.section-services {
     background-color: $color-bachground-tertiary;
     color: $color-font-secondary;
 }
@@ -176,6 +184,7 @@ body {
 .btn {
     border: none;
     cursor: pointer;
+
     &,
     &:link,
     &:visited {
@@ -192,13 +201,14 @@ body {
         // color: $color-white;
     }
 }
-.btn--action {
-}
+
+.btn--action {}
 
 // THE REST ELEMENTS
-.p--underline{
+.p--underline {
     position: relative;
-    &::after{
+
+    &::after {
         content: '';
         position: absolute;
         left: 0;

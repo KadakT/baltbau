@@ -1,11 +1,11 @@
 .contact {
 
     //.contact__title
-    &__title{
+    &__title {
         text-align: center;
     }
 
-    .title{
+    .title {
         border-bottom: 1px solid $color-primary;
     }
 
@@ -16,36 +16,51 @@
 
     // .contact__contacts
     &__contacts {
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        div{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 33%;
-            height: 100%;
+        // text-align: center;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        // align-items: flex-start;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+
+        @include respond(phone) {
+            display: block;
         }
     }
 
-    &__link{
+    &__link {
         color: $color-font-secondary;
         text-decoration: none;
     }
 
-    &__link:hover{
+    &__link:hover {
         color: $color-primary;
     }
 
     // .contact__item
     &__item {
-       
+        //  display: flex;
+        //     flex-direction: column;
+        //     justify-content: center;
+        //     align-items: center;
+        //     width: 33%;
+        //     height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem 2rem;
     }
 
-     // .contact__icon
+    &__item:last-child {
+        grid-column: auto;
+
+        @include respond(tab-port) {
+            grid-column: 1 / span 2;
+        }
+    }
+
+    // .contact__icon
     &__icon {
         display: flex;
         align-items: center;
@@ -62,30 +77,23 @@
         display: inline-block;
         width: 35px;
         height: 35px;
-    } 
+    }
 
     // .contact__name
-    &__name {
-        
-    }
+    &__name {}
 
     // .contact__skype
-    &__skype {
-    }
+    &__skype {}
 
     // .contact__email
 
-    &__email {
-        
-    }
+    &__email {}
 
     // .contact__phone
 
-    &__phone {
-    }
+    &__phone {}
 
-    .heading-2::after{
+    .heading-2::after {
         display: none;
     }
 }
-
