@@ -45,12 +45,6 @@ jQuery(document).ready(function() {
       $(".navigation__nav").removeAttr('style'); 
       $(".navigation__btn").removeClass( "close" );
     }
-
-    // if($('.skills__container').isInViewport()){
-    //   jQuery('.skills__container').each(function() {
-    //     jQuery(this).find('.skills__skill').animate({ width: jQuery(this).attr('data-percent') }, 3000);
-    // });
-    // }
   });
 
     $(document).click(function(e) {
