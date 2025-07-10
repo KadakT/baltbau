@@ -88,11 +88,12 @@ $bp_small: 36em; // 576px
 
 html, body {
   max-width: 100%;
-  overflow-x: hidden;
+ 
 }
 
 html {
     font-size: $fs-400;
+    overflow-x: hidden;
 }
 
 body {
