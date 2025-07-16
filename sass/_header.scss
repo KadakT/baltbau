@@ -2,46 +2,86 @@
     background-color: $color-bachground-tertiary;
     display: flex;
     justify-content: space-between;
-    width: 100%; 
+    width: 100%;
     height: 70px;
     align-items: center;
     padding: 1rem;
     position: relative;
     z-index: 100;
+
     @include respond(tab-port) {
         display: block;
         padding: 0;
     }
-    @include respond(phone){
+
+    @include respond(phone) {
         height: 60px
     }
 
-   &__logo-box{
-    img{
-        position: absolute;
-        top: 3px;
-        height: 65px;
-        left: .8rem;
-        @include respond(phone){
-            top: 5px;
-            height: 50px;
+    &__logo-box {
+        display: flex;
+        align-items: center;
+        img {
+            height: 65px;
+            margin-left: .8rem;
+            margin-top: 3px;
+
+            @include respond(phone) {
+                margin-top: 5px;
+                height: 50px;
+            }
+        }
+
+        @include respond(tab-port) {
+            float: left;
         }
     }
- 
-    @include respond(tab-port) {
-        float: left;
+
+    &__slogan {
+        color: $color-primary;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-   }
+
+    &__slogan--upper-part {
+        font-family: "Cinzel", serif;
+        font-optical-sizing: auto;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.5rem;
+        @include respond(tab-port){
+            font-size: calc(1rem + 6 * ((100vw - 320px) / 680));
+        }
+    }
+
+    &__slogan--upper-part::after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: $color-primary;
+        display: block;
+    }
+
+    &__slogan--lower-part {
+        font-family: "Pacifico", cursive;
+        font-weight: 400;
+        font-style: normal;
+        font-size: .8rem;
+        @include respond(tab-port){
+            font-size: calc(.5rem + 6 * ((100vw - 320px) / 680));
+        }
+    }
 }
 
 .sticky-top {
     @supports (position: sticky) {
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    //   background-color: $color-white;
-     background-color: $color-bachground-tertiary;
-     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8),   
-  						0 0 12px rgba(255, 255, 255, 0.08);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        //   background-color: $color-white;
+        background-color: $color-bachground-tertiary;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.8),
+            0 0 12px rgba(255, 255, 255, 0.08);
     }
- }
+}
