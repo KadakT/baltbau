@@ -331,6 +331,10 @@ body {
     opacity: 1;
   }
 }
+.object-position-top {
+  object-position: top;
+}
+
 :root {
   --inline-padding: 1rem;
 }
@@ -598,6 +602,9 @@ body {
   }
 }
 
+.services {
+  text-align: center;
+}
 .services__card {
   display: flex;
   margin-bottom: 2rem;
@@ -686,7 +693,7 @@ body {
   border-radius: 3px;
 }
 .about__img {
-  width: 40%;
+  width: 35%;
   position: relative;
 }
 .about__img img {
@@ -722,7 +729,7 @@ body {
   bottom: -19px;
 }
 .about__text {
-  width: 60%;
+  width: 65%;
   padding: 2rem 3rem 3rem 1rem;
   display: flex;
   flex-direction: column;
@@ -946,11 +953,19 @@ body {
   margin-top: 1rem;
 }
 .section-projects .card__img {
-  height: 200px;
+  height: 150px;
   overflow: hidden;
   margin-top: -2rem;
   margin-inline: -1rem;
   border-radius: 3px;
+  position: relative;
+}
+.section-projects .card__img::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  pointer-events: none;
 }
 .section-projects .card img {
   height: 100%;
