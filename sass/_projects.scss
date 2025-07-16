@@ -1,9 +1,9 @@
-.section-projects{
-	.heading-3{
+.section-projects {
+	.heading-3 {
 		position: relative;
 	}
 
-	.heading-3::after{
+	.heading-3::after {
 		content: '';
 		height: 3px;
 		min-width: 75px;
@@ -13,18 +13,19 @@
 		left: 50%;
 		transform: translateX(-50%);
 	}
-   
-	&__cards{
-        display: flex;
+
+	&__cards {
+		display: flex;
 		gap: 3rem;
 		justify-content: center;
 		flex-wrap: wrap;
+
 		@include respond(tab-land) {
 			justify-content: space-evenly;
 		}
 	}
 
-	.card{
+	.card {
 		max-width: 400px;
 		min-width: 250px;
 		background-color: $color-bachground-tertiary-light;
@@ -34,27 +35,35 @@
 		position: relative;
 		transform-style: preserve-3d;
 		margin-top: 1rem;
-        &__img{
-            height: 200px;
-            overflow: hidden;
-            margin-top: -2rem;
-            margin-inline: -1rem;
-            border-radius: 3px;
-        }
-		img{
-			height: 100%;
-            width: 100%;
-            object-fit: cover;
-		}
-		&__title{
-			
-		}
-		&__title{
-			
-		}
-		&__body{
 
+		&__img {
+			height: 150px;
+			overflow: hidden;
+			margin-top: -2rem;
+			margin-inline: -1rem;
+			border-radius: 3px;
+			position: relative;
 		}
+
+		&__img::after {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-color: rgba(0, 0, 0, 0.4);
+			pointer-events: none;
+		}
+
+		img {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+
+		&__title {}
+
+		&__title {}
+
+		&__body {}
 	}
 
 	.card::before {
@@ -68,23 +77,23 @@
 		right: -10px;
 		border-radius: 6px;
 		transform: translateZ(-1px);
-		box-sizing: content-box; 
+		box-sizing: content-box;
 	}
 }
 
 .cta-text {
-  margin-top: 2rem;
-  font-size: 1.1rem;
+	margin-top: 2rem;
+	font-size: 1.1rem;
 }
 
 .cta-link {
-  color: #e63946;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+	color: #e63946;
+	text-decoration: none;
+	font-weight: 500;
+	transition: color 0.3s ease;
 
-  &:hover {
-    color: #ff6b6b;
-    text-decoration: underline;
-  }
+	&:hover {
+		color: #ff6b6b;
+		text-decoration: underline;
+	}
 }
