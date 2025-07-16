@@ -28,7 +28,7 @@
     &__list {
         list-style: none;
         display: flex;
-        padding-right: 5vw;
+        // padding-right: 5vw;
         flex-direction: row;
 
         @include respond(tab-port) {
