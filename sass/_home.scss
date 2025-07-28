@@ -62,12 +62,6 @@
     @include respond(tab-port){
         font-size: calc(2rem + 6 * ((100vw - 320px) / 680));
     }
-
-    &--main {}
-
-    &--sub {}
-
-    &::after {}
 }
 
 .heading-primary::after {

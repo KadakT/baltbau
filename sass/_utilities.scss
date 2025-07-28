@@ -83,3 +83,96 @@
 .object-position-top{
    object-position: top;
 }
+
+
+.btn {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: $border-radius;
+}
+
+.btn.btn-primary{
+  border: 1px solid $color-black;
+  color: $color-primary;
+}
+
+.btn.btn-secondary{
+     border: 1px solid $color-primary;
+     color: $color-font-primary;
+}
+
+.btn:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: $border-radius;
+}
+
+.btn.btn-primary:after{
+  background-color: $color-bachground-tertiary;
+}
+
+.btn.btn-secondary:after{
+   background-color: $color-primary;
+}
+
+.btn:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.btn:focus,
+.btn:focus-visible{
+   outline: 2px solid $color-secondary-light-2;
+   outline-offset: 2px;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:focus-visible{
+   outline: 2px solid $color-bachground-tertiary;
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-secondary:focus-visible{
+   outline: 2px solid $color-primary;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  .skip-link:focus {
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    padding: 1rem;
+    background: #000;
+    color: #fff;
+    z-index: 1000;
+  }
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 13px 50px 13px;
+  }
+}
+

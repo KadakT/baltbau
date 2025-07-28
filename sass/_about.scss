@@ -6,17 +6,6 @@
 		position: relative;
 	}
 
-
-
-	// .about__picture
-	&__picture {}
-
-	// .about__img
-	&__img {}
-
-	// .about__details
-	&__details {}
-
 	&__description-container {
 		display: flex;
 		flex-direction: column;
@@ -101,8 +90,6 @@
 			margin-bottom: 3rem;
 		}
 	}
-
-	.left {}
 
 	.right {
 

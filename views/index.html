@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- Website developed by Tatjana Kadak - https://tkweb.ee -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="BaltBau bietet professionelle Bau-, Renovierungs- und Sanierungsdienste in Deutschland an. Kontaktieren Sie uns für zuverlässige Lösungen rund ums Haus.">
+    <meta name="description"
+        content="BaltBau bietet professionelle Bau-, Renovierungs- und Sanierungsdienste in Deutschland an. Kontaktieren Sie uns für zuverlässige Lösungen rund ums Haus.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -13,17 +15,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Pacifico&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css?v=0.3.css">
     <script src="js/jquery.min.js"></script>
     <title>BaltBau – Bau- und Renovierungsservice in Deutschland</title>
 
-    <link rel="icon" href="/img/Baltbau_Logo_triangle_transparent.png" type="image/png">
+    <link rel="icon" href="img/Baltbau_Logo_triangle_transparent.png" type="image/png">
 </head>
 
 <body>
     <header class="sticky-top">
         <div class="header container">
+            <a href="#section-home" class="skip-link">Scip zum Hauptmenü</a>
             <div class="header__logo-box">
                 <a href="#section-home"><img class="header__logo-svg" alt="BaltBau GmbH"
                         src="img/svg/baltbau_logo_yellow_triangle.svg"></a>
@@ -38,29 +42,34 @@
                     <span class="navigation__icon">&nbsp;</span>
                 </button>
                 <!-- <div class="navigation__background">&nbsp;</div> -->
-                <nav class="navigation__nav" role="menu" id="menu">
-                    <ul class="navigation__list">
-                        <li class="navigation__item"><a href="#section-about" class="navigation__link"
-                                role="menuitem">Über uns</a></li>
-                        <li class="navigation__item"><a href="#section-services" class="navigation__link"
-                                role="menuitem">Unsere Leistungen</a></li>
-                        <li class="navigation__item"><a href="#section-projects" class="navigation__link"
-                                role="menuitem">Referenzen</a></li>
-                        <li class="navigation__item"><a href="#section-contact" class="navigation__link"
-                                role="menuitem">Kontakt</a></li>
+                <nav class="navigation__nav">
+                    <ul class="navigation__list" role="menu" id="menu" aria-label="Hauptnavigation">
+                        <li class="navigation__item" role="presentation">
+                            <a href="#section-about" class="navigation__link" role="menuitem">Über uns</a>
+                        </li>
+                        <li class="navigation__item" role="presentation">
+                            <a href="#section-services" class="navigation__link" role="menuitem">Unsere Leistungen</a>
+                        </li>
+                        <li class="navigation__item" role="presentation">
+                            <a href="#section-projects" class="navigation__link" role="menuitem">Referenzen</a>
+                        </li>
+                        <li class="navigation__item" role="presentation">
+                            <a href="#section-contact" class="navigation__link" role="menuitem">Kontakt</a>
+                        </li>
                     </ul>
                 </nav>
             </div>
         </div>
     </header>
     <main>
-        <section class="section-home" id="section-home">
+        <section class="section-home" id="section-home" tabindex="-1">
             <div class="mask"></div>
             <div class="home container">
                 <div class="rotated-square">
                     <div class="home__content">
                         <h1 class="heading-primary ">Baltbau GmbH</h1>
-                        <img id="logo" src="img/animated_logo.webp" alt="Animated BaltBau GmbH">
+                        <img id="logo" src="img/animated_logo.webp" alt="Animated BaltBau GmbH" class="img no-download"
+                            oncontextmenu="return false;">
                     </div>
                 </div>
             </div>
@@ -82,7 +91,12 @@
 
                 <div class="about__card left">
                     <div class="about__img">
-                        <img class="zoom-in" alt="" src="img/constructions.jpeg">
+                        <picture>
+                            <source srcset="img/constructions_mob.jpg" media="(max-width: 768px)">
+                            <img src="img/constructions.jpg" class="zoom-in no-download"
+                                alt="Mehrfamilienhaus im Rohbau mit Gerüst"
+                                oncontextmenu="return false;">
+                        </picture>
                     </div>
                     <div class="about__text left">
                         <h3 class="heading-3">Unser Schwerpunkt: Beton- und Stahlbetonbau</h3>
@@ -101,7 +115,9 @@
                 </div>
                 <div class="about__card right">
                     <div class="about__img mobile">
-                        <img class="zoom-in" alt="" src="./img/collaboration_muted_overlay.jpg">
+                            <img src="img/collaboration_muted_overlay_mob.jpg"
+                                alt="Team der Baltbau GmbH auf der Baustelle" class="zoom-in no-download"
+                                oncontextmenu="return false;">
                     </div>
                     <div class="about__text ">
                         <h3 class="heading-3">Zusammenarbeit mit Bauleitung & Projektsteuerung</h3>
@@ -115,12 +131,19 @@
                             Bauleitung und schafft Vertrauen – von der ersten Rücksprache bis zum fertigen Rohbau.</p>
                     </div>
                     <div class="about__img desktop">
-                        <img class="zoom-in" alt="" src="img/collaboration_muted_overlay.jpg">
+                        <img src="img/collaboration_muted_overlay.jpg"
+                                alt="Team der Baltbau GmbH auf der Baustelle" class="zoom-in no-download"
+                                oncontextmenu="return false;">
                     </div>
                 </div>
                 <div class="about__card left">
                     <div class="about__img">
-                        <img class="zoom-in" alt="" src="img/construction.jpeg">
+                        <picture>
+                            <source srcset="img/construction_mob.jpg" media="(max-width: 768px)">
+                            <img  src="img/construction.jpg"
+                                alt="Bauarbeiter bei Fundamentarbeiten auf einer Industriebaustelle mit Stahlkonstruktion" class="zoom-in no-download"
+                                oncontextmenu="return false;">
+                        </picture>
                     </div>
                     <div class="about__text left">
                         <h3 class="heading-3">Unsere Stärken – Ihr Vorteil</h3>
@@ -145,46 +168,32 @@
         <section class="section-services  u-padding-bottom-medium u-padding-top-medium" id="section-services">
             <div class="services container u-margin-bottom-small">
                 <h2 class="heading-2 u-margin-bottom-medium">Unsere Hauptleistungen</h2>
-                <!-- <div class="services__card left"> -->
-                    <!-- <div class="services__img">
-                        <img alt="" src="img/constructions.jpeg">
-                    </div> -->
-                    <!-- <div class="services__text left"> -->
-                        <h3 class="heading-3">Rohbau</h3>
-                        <p>Die Baltbau GmbH ist Ihr Experte für den soliden Rohbau. <br>
-                            Vom Fundament
-                            bis zum Dach errichten wir Ihr Bauvorhaben mit höchster Präzision und unter Einsatz
-                            hochwertiger Materialien. Wir legen Wert auf solide Strukturen als Grundlage für jedes
-                            erfolgreiche Bauprojekt.
-                        </p>
-                    <!-- </div>
-                </div> -->
-                <!-- <div class="services__card right">
-                    <div class="services__text ">
-                        <h3 class="heading-3">Trockenbau</h3>
-                        <p>Unsere Trockenbauleistungen umfassen innovative Lösungen für die
-                            Gestaltung und Anpassung Ihrer Räume. <br>
-                            Von Wand- und Deckenverkleidungen bis zueffizienten Raumtrennsystemen bieten wir flexible
-                            und nachhaltige Lösungen für Ihren
-                            individuellen Bedarf.</p>
-                    </div>
-                    <div class="services__img">
-                        <img alt="" src="img/interior_construction_works.png">
-                    </div>
-                </div> -->
+                <h3 class="heading-3">Rohbau</h3>
+                <p>Die Baltbau GmbH ist Ihr Experte für den soliden Rohbau. <br>
+                    Vom Fundament
+                    bis zum Dach errichten wir Ihr Bauvorhaben mit höchster Präzision und unter Einsatz
+                    hochwertiger Materialien. Wir legen Wert auf solide Strukturen als Grundlage für jedes
+                    erfolgreiche Bauprojekt.
+                </p>
             </div>
         </section>
         <section class="section-projects" id="section-projects">
             <div class="section-projects__additional u-padding-top-medium">
                 <div class="container  ">
                     <h2 class="heading-2 u-margin-bottom-medium">Projekte, auf die wir stolz sind</h2>
-                    <p class="u-padding-bottom-small">Wir haben bei anspruchsvollen Bauvorhaben mitgewirkt – mit strukturierten Abläufen, Termintreue
+                    <p class="u-padding-bottom-small">Wir haben bei anspruchsvollen Bauvorhaben mitgewirkt – mit
+                        strukturierten Abläufen, Termintreue
                         und hoher Qualität. Unsere Auftraggeber schätzen unsere ruhige Hand in stressigen Bauphasen und
                         unsere Verlässlichkeit in der Ausführung.</p>
                     <div class="section-projects__cards  u-padding-bottom-medium">
                         <div class="card zoom-in">
                             <div class="card__img u-margin-bottom-small">
-                                <img alt="" src="img/UPM_construction.jpeg">
+                            <picture>
+                                <source srcset="img/UPM_construction_mob.jpg" media="(max-width: 768px)">
+                                <img src="img/UPM_construction.jpg" class="no-download"
+                                    alt="Betonarbeiten an der Bodenplatte des UPM Biochemicals Werks in Leuna"
+                                    oncontextmenu="return false;">
+                             </picture>
                             </div>
                             <div class="card__title u-margin-bottom-small">
                                 <h3 class="heading-4">UPM Biochemicals Leuna</h3>
@@ -192,13 +201,15 @@
                             <div class="card__body">
                                 <p>Beton- und Schalungsarbeiten an der Bodenplatte und Gebäudestruktur</p>
                             </div>
-                            <div class="card__footer">
-
-                            </div>
                         </div>
                         <div class="card zoom-in">
                             <div class="card__img u-margin-bottom-small ">
-                                <img class="object-position-top" alt="" src="img/floor_works.jpeg">
+                            <picture>
+                                <source srcset="img/floor_works_mob.jpg" media="(max-width: 768px)">
+                                <img src="img/floor_works.jpg" class="no-download"
+                                    alt="Baltbau-Mitarbeiter bei Bewehrungsarbeiten in einer runden Fundamentform"
+                                    oncontextmenu="return false;">
+                             </picture>
                             </div>
                             <div class="card__title u-margin-bottom-small">
                                 <h3 class="heading-4">ALBA Recyclinganlage Walldürn</h3>
@@ -207,18 +218,61 @@
                                 <p>Hochbauausführung in Taktung mit industriellen Vorgaben.
                                 </p>
                             </div>
-                            <div class="card__footer">
-
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section-projects__highlight">
                 <p class="cta-text u-margin-bottom-small">
-                    Gerne stellen wir auf Anfrage weitere Projekte vor –
-                    <a href="#section-contact" class="cta-link">sprechen Sie uns an</a>.
+                    <span> Gerne stellen wir auf Anfrage weitere Projekte vor.</span>
+                    <button class="btn btn-primary" id="openModalBtn">Kontaktieren Sie uns</button>
                 </p>
+                <div id="contactModal" class="modal">
+                    <div class="modal__conatiner" tabindex="-1" role="dialog" aria-modal="true">
+                        <div class="form">
+                            <span class="form__close-btn" tabindex="0" role="button"
+                                aria-label="Formular schließen">&times;</span>
+                            <h2 id="contact-heading" class="heading-4">Weitere Projekte anfragen</h2>
+                            <form id="contactForm" novalidate aria-labelledby="contact-heading"
+                                aria-describedby="formResponse">
+                                <input type="text" name="website" style="display:none">
+
+                                <label>
+                                    <input type="text" id="name" name="name" required aria-describedby="nameError"
+                                        placeholder=" " autocomplete="name">
+                                    <span>Ihr Name *</span>
+                                </label>
+                                <div class="error-message" id="nameError" aria-live="polite" role="status"></div>
+
+                                <label>
+                                    <input type="email" id="email" name="email" required aria-describedby="emailError"
+                                        placeholder=" " autocomplete="email">
+                                    <span>Ihre E-Mail-Adresse *</span>
+                                </label>
+                                <div class="error-message" id="emailError" aria-live="polite" role="status"></div>
+
+                                <label>
+                                    <textarea id="message" name="message" rows="5" minlength="10" maxlength="1000"
+                                        required aria-describedby="messageError" placeholder=" "></textarea>
+                                    <span>Ihre Nachricht *</span>
+                                </label>
+
+                                <!-- <label for="message">Nachricht *</label>
+                                <textarea id="message" name="message" rows="5" minlength="10" maxlength="1000"
+                                    required aria-describedby="messageError"></textarea> -->
+                                <div class="error-message" id="messageError" aria-live="polite" role="status"></div>
+                                <small id="messageHelp" class="form-help">
+                                    Schreiben Sie mindestens 10 Zeichen und maximal 1000 Zeichen.
+                                </small>
+                                <div class="counter" id="messageCounter" aria-live="polite" role="status">Noch 1000
+                                    Zeichen verfügbar</div>
+
+                                <div id="formResponse" class="form__response" aria-live="polite" role="status"></div>
+                                <button class="btn btn-secondary" type="submit">Senden</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

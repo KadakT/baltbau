@@ -1,22 +1,3 @@
-.projects {
-    // .projects__text
-    &__text {
-       
-    }
-
-    // .projects__list
-
-    &__list {
-       
-    }
-
-    // .projects__item
-
-    &__item {
-       
-    }
-}
-
 .card {
     display: flex;
     flex-direction: column;
@@ -29,8 +10,6 @@
     &__tittle {
        line-height: 4rem;
     }
-
-    // .card__text
 
     &__text {
         margin-bottom: 1rem;
