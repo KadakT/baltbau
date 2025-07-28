@@ -16,11 +16,6 @@
 
     // .contact__contacts
     &__contacts {
-        // text-align: center;
-        // display: flex;
-        // flex-wrap: wrap;
-        // justify-content: space-between;
-        // align-items: flex-start;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 
@@ -40,12 +35,6 @@
 
     // .contact__item
     &__item {
-        //  display: flex;
-        //     flex-direction: column;
-        //     justify-content: center;
-        //     align-items: center;
-        //     width: 33%;
-        //     height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -78,20 +67,6 @@
         width: 35px;
         height: 35px;
     }
-
-    // .contact__name
-    &__name {}
-
-    // .contact__skype
-    &__skype {}
-
-    // .contact__email
-
-    &__email {}
-
-    // .contact__phone
-
-    &__phone {}
 
     .heading-2::after {
         display: none;

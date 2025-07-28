@@ -98,6 +98,11 @@ body {
     height: 65vh;
   }
 }
+@media only screen and (max-width: 36em) {
+  .section-home {
+    background-image: url("./../img/our_strengths_mob.jpg");
+  }
+}
 
 .section-about {
   background-color: #292929;
@@ -128,6 +133,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1.5%;
+  width: 100%;
+}
+@media only screen and (max-width: 62em) {
+  .section-projects__highlight {
+    padding: 0 0.8rem;
+  }
 }
 
 .section-contact,
@@ -136,10 +148,6 @@ body {
   color: #fdfdfd;
 }
 
-.btn {
-  border: none;
-  cursor: pointer;
-}
 .p--underline {
   position: relative;
 }
@@ -335,6 +343,97 @@ body {
   object-position: top;
 }
 
+.btn {
+  font-size: 16px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding: 13px 20px 13px;
+  outline: 0;
+  cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  border-radius: 3px;
+}
+
+.btn.btn-primary {
+  border: 1px solid #000000;
+  color: #fed620;
+}
+
+.btn.btn-secondary {
+  border: 1px solid #fed620;
+  color: #1d1d1d;
+}
+
+.btn:after {
+  content: "";
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  top: 7px;
+  left: 7px;
+  transition: 0.2s;
+  border-radius: 3px;
+}
+
+.btn.btn-primary:after {
+  background-color: #0a0a0a;
+}
+
+.btn.btn-secondary:after {
+  background-color: #fed620;
+}
+
+.btn:hover:after {
+  top: 0px;
+  left: 0px;
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 2px solid #707070;
+  outline-offset: 2px;
+}
+
+.btn.btn-primary:focus,
+.btn.btn-primary:focus-visible {
+  outline: 2px solid #0a0a0a;
+}
+
+.btn.btn-secondary:focus,
+.btn.btn-secondary:focus-visible {
+  outline: 2px solid #fed620;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  background: #000;
+  color: #fff;
+  z-index: 1000;
+}
+
+@media (min-width: 768px) {
+  .btn {
+    padding: 13px 50px 13px;
+  }
+}
 :root {
   --inline-padding: 1rem;
 }
@@ -392,6 +491,7 @@ body {
     font-size: calc(2rem + 6 * (100vw - 320px) / 680);
   }
 }
+
 .heading-primary::after {
   content: "";
   height: 3px;
@@ -985,21 +1085,135 @@ body {
   transform: translateZ(-1px);
   box-sizing: content-box;
 }
+.section-projects .cta-text {
+  z-index: 1;
+}
 
 .cta-text {
   margin-top: 2rem;
   font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cta-text span {
+  margin-right: 0.7rem;
+  margin-bottom: 1rem;
 }
 
-.cta-link {
-  color: #e63946;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
 }
-.cta-link:hover {
-  color: #ff6b6b;
-  text-decoration: underline;
+
+.modal__conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Modal Content Box */
+.form {
+  z-index: 1;
+  background: #000000;
+  color: #fdfdfd;
+  padding: 2rem;
+  border-radius: 3px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+}
+.form__close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fed620;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  line-height: 1;
+  transition: transform 0.2s, color 0.2s;
+  outline: none;
+}
+.form__close-btn:hover, .form__close-btn:focus {
+  color: #c9a100;
+  transform: scale(1.2);
+}
+.form__close-btn:focus-visible {
+  outline: 2px solid #fed620;
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.form .heading-4 {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.form input,
+.form textarea {
+  width: 100%;
+  background-color: #212121;
+  border: 1px solid #292929;
+  color: #fdfdfd;
+  border-radius: 3px;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+}
+.form input:focus,
+.form input:focus-visible,
+.form textarea:focus,
+.form textarea:focus-visible {
+  outline: 2px solid #707070;
+}
+.form label {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.form label > span {
+  transition: all 0.2s;
+  transform-origin: top left;
+}
+.form label > input[placeholder=" "]:not(:focus):placeholder-shown + span,
+.form label > textarea[placeholder=" "]:not(:focus):placeholder-shown + span {
+  transform: translateY(1.8em) translatex(5px) scale(1.25);
+  pointer-events: none;
+  opacity: 0.7;
+}
+.form label > textarea {
+  resize: vertical;
+  min-height: 6rem;
+  font-family: inherit;
+}
+.form .field-error {
+  border: 2px solid red;
+}
+.form .error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+}
+.form .counter {
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 0.25rem;
+  text-align: right;
+}
+.form .btn {
+  float: right;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

@@ -134,6 +134,9 @@ body {
     @include respond(phone-medium) {
         height: 65vh;
     }
+    @include respond(phone) {
+        background-image: url("./../img/our_strengths_mob.jpg");
+    }
 }
 
 .section-about {
@@ -154,8 +157,6 @@ body {
     transition: all 0.2s ease-out;
 }
 
-.section-projects {}
-
 .section-projects {
 
     &__additional {
@@ -170,6 +171,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 0 1.5%;
+        width: 100%;
+
+    @include respond(tab-port) {
+        padding: 0 .8rem;
+    }
     }
 }
 
@@ -181,29 +188,6 @@ body {
 
 //............ SHARED ELEMENTS...................
 
-//BUTTONS
-.btn {
-    border: none;
-    cursor: pointer;
-
-    &,
-    &:link,
-    &:visited {
-        // text-transform: uppercase;
-        // text-decoration: none;
-        // padding:  1rem 2rem;
-        // display: inline-block;
-        // border-radius: 10rem;
-        // transition: all .2s;
-        // position: relative;
-        // font-size: $fs-400;
-        // width: max-content;
-        // background-color: $color-primary-dark;
-        // color: $color-white;
-    }
-}
-
-.btn--action {}
 
 // THE REST ELEMENTS
 .p--underline {
@@ -215,7 +199,6 @@ body {
         left: 0;
         bottom: -.7rem;
         width: 100%;
-        //background-color: $color-grey-light-2;
         height: 1px;
     }
 }
