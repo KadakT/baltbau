@@ -98,7 +98,7 @@ jQuery(document).ready(function () {
 
   $(window).on("resize scroll", function () {
     windowWidth = $(window).width();
-    if (windowWidth >= 992) {
+    if (windowWidth >= 1200) {
       $(".navigation__nav").removeAttr('style');
       $(".navigation__btn").removeClass("close");
     }
@@ -106,7 +106,7 @@ jQuery(document).ready(function () {
 
   $(document).on("click", function (e) {
     const isOutsideNav = !$(e.target).closest(".navigation__nav, .navigation__btn").length;
-    if (windowWidth <= 992) {
+    if (windowWidth <= 1200) {
       if (isOutsideNav) {
         $(".navigation__btn").removeClass("close");
         $(".navigation__nav").slideUp("slow");

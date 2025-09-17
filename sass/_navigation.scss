@@ -4,9 +4,9 @@
     &__btn {
         display: none;
         margin-right: .8rem;
-        padding-top: .7rem;
+        // padding-top: .7rem;
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             display: block;
             height: 70px;
             margin-left: 1rem;
@@ -28,21 +28,18 @@
     &__list {
         list-style: none;
         display: flex;
-        // padding-right: 5vw;
         flex-direction: row;
 
-        @include respond(tab-port) {
+        @include respond(tab-land) {
             flex-direction: column;
         }
     }
 
     &__link:link,
     &__link:visited {
-        font-size: $fs-400;
+        font-size:$fs-350;
         font-family: $font-display;
         font-weight: 500;
-        ;
-        // color: $color-font-primary;
         color: $color-font-secondary;
         text-decoration: none;
         text-transform: uppercase;
@@ -63,6 +60,9 @@
     &__icon {
         position: relative;
         margin-top: 1.4rem;
+         @include respond(phone) {
+              margin-top: .5rem;
+        }
 
         &,
         &::before,
@@ -114,13 +114,14 @@
 }
 
 
-@include respond(tab-port) {
+@include respond(tab-land) {
     .navigation {
         &__nav {
             height: 100%;
             display: none;
             padding: 2rem 0 1rem 0;
             text-align: center;
+            width: 100%;
         }
 
         &__nav.show {

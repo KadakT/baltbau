@@ -59,6 +59,11 @@ html {
   font-size: 1em;
   overflow-x: hidden;
 }
+@media only screen and (max-width: 36em) {
+  html {
+    font-size: 0.9em;
+  }
+}
 
 body {
   font-family: "Roboto Condensed", sans-serif;
@@ -184,6 +189,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   position: relative;
+  color: #fed620;
 }
 @media only screen and (max-width: 62em) {
   .heading-2 {
@@ -509,9 +515,8 @@ body {
 .navigation__btn {
   display: none;
   margin-right: 0.8rem;
-  padding-top: 0.7rem;
 }
-@media only screen and (max-width: 62em) {
+@media only screen and (max-width: 75em) {
   .navigation__btn {
     display: block;
     height: 70px;
@@ -536,7 +541,7 @@ body {
   display: flex;
   flex-direction: row;
 }
-@media only screen and (max-width: 62em) {
+@media only screen and (max-width: 75em) {
   .navigation__list {
     flex-direction: column;
   }
@@ -561,6 +566,11 @@ body {
 .navigation__icon {
   position: relative;
   margin-top: 1.4rem;
+}
+@media only screen and (max-width: 36em) {
+  .navigation__icon {
+    margin-top: 0.5rem;
+  }
 }
 .navigation__icon, .navigation__icon::before, .navigation__icon::after {
   width: 3rem;
@@ -598,12 +608,13 @@ body {
   transform: rotate(-135deg);
 }
 
-@media only screen and (max-width: 62em) {
+@media only screen and (max-width: 75em) {
   .navigation__nav {
     height: 100%;
     display: none;
     padding: 2rem 0 1rem 0;
     text-align: center;
+    width: 100%;
   }
   .navigation__nav.show {
     opacity: 1;
@@ -774,6 +785,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 1.15em;
+}
+@media only screen and (max-width: 36em) {
+  .about__description-container {
+    font-size: 1em;
+  }
 }
 .about__description {
   display: flex;
