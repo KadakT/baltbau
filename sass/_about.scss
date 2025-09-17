@@ -10,6 +10,10 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		font-size: $fs-400;
+		@include respond(phone){
+			font-size: $fs-400-phone;
+		}
 	}
 
 	// .about__text
@@ -94,7 +98,7 @@
 	.right {
 
 		.about__text {
-			text-align: right;
+			// text-align: right;
 			align-items: flex-end;
 			padding: 2rem 1rem 3rem 3rem;
 		}

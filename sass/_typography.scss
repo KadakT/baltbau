@@ -25,6 +25,7 @@
     text-align: center;
     text-transform: uppercase;
     position: relative;
+    color: $color-primary;
     @include respond(tab-port){
         font-size: $fs-large-tablet;
     }

@@ -50,15 +50,16 @@ $fs-500: 1.75em; // 28px
 $fs-500-tablet: 1.5em; // 24px
 $fs-500-phone: 1.375em; //22px
 
+// font-sizes for body large
+$fs-400: 1.15em; // 16px
+$fs-400-phone: 1em;
+
 // font-sizes for body
-$fs-400: 1em; // 16px
-// $fs-400-tablet: 
-// $fs-400-phone:
+$fs-350: 1em; // 16px
+$fs-350-phone: .9em;
 
 // font-sizes small
 $fs-300: .8em; // 12.8px
-// $fs-300-tablet:
-// $fs-300-phone:
 
 
 //RESPONSIVE BREAKPOINTS
@@ -92,8 +93,11 @@ html, body {
 }
 
 html {
-    font-size: $fs-400;
+    font-size: $fs-350;
     overflow-x: hidden;
+    @include respond(phone){
+        font-size: $fs-350-phone;
+    }
 }
 
 body {
