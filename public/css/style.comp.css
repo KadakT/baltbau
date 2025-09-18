@@ -177,7 +177,6 @@ body {
   font-family: "Roboto Condensed", sans-serif;
   line-height: 0.8em;
   color: #fed620;
-  text-transform: uppercase;
   white-space: nowrap;
 }
 
@@ -1013,6 +1012,9 @@ body {
 }
 .contact .heading-2::after {
   display: none;
+}
+.contact .heading-3 {
+  text-transform: none;
 }
 
 .footer {
