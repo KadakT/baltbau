@@ -198,6 +198,10 @@ jQuery(document).ready(function () {
         if (response === "OK") {
           $("#formResponse").text("Nachricht erfolgreich gesendet!").addClass("submitted-form");
           $("#contactForm")[0].reset();
+          setInterval(function () {
+                modal.fadeOut();
+                if (focusedElementBeforeModal) focusedElementBeforeModal.focus();
+          }, 2500);
         } else {
           $("#formResponse").text(response).addClass("invalid-form");
         }

@@ -45,14 +45,13 @@ if (strlen($message) > 1000) {
   exit;
 }
 
-$from = "noreply@baltbau.de";
 $to = "info@baltbau.eu"; 
-$headers = "From: $from\r\n";
-$headers .= "Reply-To: $email\r\n";
-$headers .= "Content-Type: text/plain; charset=UTF-8";
+$headers = 'From: noreplay@baltbau.de' . "\r\n" .
+           'Reply-To: ' . $email . "\r\n" .
+           'X-Mailer: PHP/' . phpversion();
 $body = "Absender: $email\n\nNachricht:\n$message";
 
-$sent = @mail($to, $subject, $body, $headers);
+$sent = mail($to, $subject, $body, $headers, '-fsaatja@baltbau.de');
 
 if ($sent) {
   echo "OK";
